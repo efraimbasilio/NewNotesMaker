@@ -1,0 +1,1913 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Tarlac Notes Maker</title>
+<!-- CRM bootstrap -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+<link href='https://fonts.googleapis.com/css?family=Atma' rel='stylesheet'>
+
+
+
+<style type="text/css"> 
+html, body {
+ background-image: url("http://www.technocrazed.com/wp-content/uploads/2015/12/Lenovo-Wallpaper-background1.jpg");
+ background-size: 1280px 1000px;
+/* background-position: left 25px top 6px;*/
+ background-repeat: no-repeat;
+ background-color: 	#361818;
+ font-family: 'Arial';
+ font-size: 11px;
+ color: white;
+}
+.bm { border:2px solid #000;font-size:15px;background: #cff; color: #002}
+.res { border:1px solid #000;font-size:12px;background: #cfc;color: #002}
+.res2 { border:0px solid #ccc;margin-bottom: 1px;font-size:12px;background: #cfc;
+    width: 900px; text-align: left;display: block;}
+A.y { 
+ color: rgba(255, 255, 255, 0.75);
+ font-size: 14px;
+ padding-right: 5px;
+}
+
+A:visited {
+ color: #FFFFFF;
+}
+
+A:hover.y { 
+ color: rgba(255, 255, 255, 0.6);
+}
+A { 
+ color: #fff;
+ text-decoration:none;
+ padding: 5px;
+ font-family: sans-serif;
+ font-size: 14px;
+ font-weight: bold;
+}
+A:hover {
+ color: rgba(255, 255, 255, 0.11);
+ 
+}
+
+.redColor
+{
+ color: red;
+}
+
+h1 { 
+ 
+ color: white;
+ font-family: 'Arial';
+ font-size: 11px;
+ /*font-weight: bold;*/
+ margin: 0px;
+ padding: 0px;
+ margin-top: 13px;
+ margin-left: 10px;
+ text-align: left;
+ /*text-transform: uppercase;
+ */
+}
+h2 {  
+ color: #fff;
+ font-family: Tahoma;
+ font-size: 14px;
+ margin: 0;	
+ font-weight: bold;
+ /*background: #361818;*/
+ padding: 4px;
+ padding-left: 4px;
+ text-align: left;
+}
+#mainmenu { 
+ width: 1100px;
+ background: pink; 
+ padding: 11px; 
+ border: 1px solid #fcd;
+}
+.content { 
+ width: 1100px;
+
+ background-color: red;
+ padding: 11px;
+ border: 1px solid #000000;
+ text-align: left;
+}
+#copyright { 
+ text-align: center;
+ width: 1349px;
+ color: white;
+ font-size: 12px;
+ font-family: arial;
+ background: #407400;
+ padding-bottom: 8px;
+ border-bottom: 15px solid #000000 ;
+}
+
+#myHead { 
+ border-top: 10px solid #000000;  
+ width: 1349px;
+ height: 50px;
+ color: white;
+ font-size: 15px;
+ font-family: arial;
+ background: #407400; 
+ padding-bottom: 0px;
+ padding-top: 2px;
+}
+
+.note { 
+ border: 1px solid #dff1f9;
+ padding: 5px;
+ margin-top: 2px;
+ font-family: Tahoma;
+ font-size: 11px;
+ margin-bottom: 10px;
+ text-align: left;
+ font-family: sans-serif, 'Courier New'; 
+ color: #014679;
+ background: #ecf8cc;
+}
+.ci {border: 0px solid #ccc;color: #111;font-size:14px;width:150px;}
+.titleMy {border: 1px solid #000 ;color: #000;font-size:14px; background: #A0A0A0; text-align: center;}
+.xxx {border: 1px solid #000;}
+.xxx0 {border: 1px solid #000;}
+.xres {background: #ecf8cc;padding:5px;vertical-align: top;width:360px;}
+ 
+ 
+.myAi {border: 1px solid #ccc;color: #111;} 
+ 
+.td01 {background: #ecf8cc;padding:3px;width:130px;vertical-align: top;}
+.x01 {background: #ecf8cc;padding:5px;width:40px;vertical-align: top;}
+.x02 {background: #ecf8cc;padding:5px;width:40px;vertical-align: top;}
+.x03 {background: #ecf8cc;padding:5px;vertical-align: top;}
+.xhead {background: #000;padding:3px;vertical-align: top;color: #fff;
+    text-align: center;font-weight: bold;font-size: 13px;}
+ 
+hr {
+ color: #cff1;
+ height: 1px;
+}
+ul { margin:0px;padding-left:20px;}
+.closeme {
+ text-align: center;
+ margin-bottom: 10px;
+}
+.x {color: blue;font-weight: bold;}
+.cts {border: 1px solid #dff1f9;padding:10px; width:800px;}
+sup {font-size: 13px;}
+
+
+#imgLen{
+     background-image: url("LEN.gif") !important;
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin-right: 200px;
+}
+
+.pno{
+    font-family: 'Tahoma';
+    width: 5000 px;
+    color: #000000;
+    background-color: green;
+
+    
+}
+
+/* #helpButtons{
+	
+ margin-right: 500px;
+ margin-top: 1000px;
+}
+ */
+</style>
+
+
+
+
+
+<!--  -->
+
+
+<script language="javascript"> 
+    function getTheDate(ele){ 
+        var mydate=new Date() 
+        var year=mydate.getFullYear() 
+        year = year.toLocaleString()
+        var month=mydate.getMonth()+1 
+        var daym=mydate.getDate()
+	
+		if (month==1) 
+            month="Jan"
+		if (month==2) 
+            month="Feb"
+		if (month==3) 
+            month="March"
+		if (month==4) 
+            month="April"
+		if (month==5) 
+            month="May"
+		if (month==6) 
+            month="June"
+		if (month==7) 
+            month="July"
+		if (month==8) 
+            month="Aug"
+		if (month==9) 
+            month="Sept"
+		if (month==10) 
+            month="Oct"
+		if (month==11) 
+            month="Nov"
+		if (month==12) 
+			month="Dec"	
+	
+        if (daym<10) 
+            daym="0"+daym 
+        if (month<10) 
+            month="0"+month
+
+        var hours=mydate.getHours() 
+        var minutes=mydate.getMinutes()
+		var seconds=mydate.getSeconds()
+        var year=mydate.getFullYear()
+//.12hourFormat
+	
+		if (seconds<10) 
+            seconds="0"+seconds 
+		
+		if (hours<=12) 
+			seconds =  seconds+"  "+"AM"
+			
+		if (hours>=12) 
+			seconds =  seconds+"  "+"PM"	
+			
+		if (hours>12) 
+			hours = hours - 12
+		
+		if (Hours = 0) 
+			hours = hours = 12
+			
+		if (hours<10) 
+            hours="0"+hours 
+			
+		if (minutes<10) 
+            minutes="0"+minutes 
+						
+        var cdate = hours+":"+minutes+":"+seconds+"  "+"Date: "+month+"/"+daym+"/"+year
+        ele.form.txtDate.value = cdate; 
+    } 
+
+    function getTheEndTime(ele){ 
+        var mydate=new Date() 
+        var year=mydate.getFullYear() 
+        year = year.toLocaleString()
+        var month=mydate.getMonth()+1 
+        var daym=mydate.getDate()
+	
+		if (month==1) 
+            month="Jan"
+		if (month==2) 
+            month="Feb"
+		if (month==3) 
+            month="March"
+		if (month==4) 
+            month="April"
+		if (month==5) 
+            month="May"
+		if (month==6) 
+            month="June"
+		if (month==7) 
+            month="July"
+		if (month==8) 
+            month="Aug"
+		if (month==9) 
+            month="Sept"
+		if (month==10) 
+            month="Oct"
+		if (month==11) 
+            month="Nov"
+		if (month==12) 
+			month="Dec"	
+	
+        if (daym<10) 
+            daym="0"+daym 
+        if (month<10) 
+            month="0"+month
+
+        var hours=mydate.getHours() 
+        var minutes=mydate.getMinutes()
+		var seconds=mydate.getSeconds()
+        var year=mydate.getFullYear()
+//.12hourFormat
+	
+		if (seconds<10) 
+            seconds="0"+seconds 
+		
+		if (hours<=12) 
+			seconds =  seconds+"  "+"AM"
+			
+		if (hours>=12) 
+			seconds =  seconds+"  "+"PM"	
+			
+		if (hours>12) 
+			hours = hours - 12
+		
+		if (Hours = 0) 
+			hours = hours = 12
+			
+		if (hours<10) 
+            hours="0"+hours 
+			
+		if (minutes<10) 
+            minutes="0"+minutes 
+						
+        var cdate = hours+":"+minutes+":"+seconds
+        ele.form.txtEndTime.value = cdate; 
+    } 
+</script>  
+
+<script>
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+	
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+function fifteen(){
+    var fiveMinutes = 60 * 15,
+        display = document.querySelector('#time');
+    startTimer(fifteenMinutes, display);
+};
+
+
+
+</script>
+
+<script>
+function deLeteThis()
+{
+var result = window.confirm("Are you sure you want to delete your notes???");
+if (result)
+    document.MyForm.reset();
+	
+else  
+	
+	return
+}
+
+var s=0
+var m=0
+var h=0
+
+var q
+
+
+function quizCount()
+{
+document.getElementById('timer').value=h+":"+m+ ":"+s+  "  AHT"
+s=s+1
+
+if (s==60)
+{
+m = m +1
+s = 0
+}
+if (m==60)
+{
+h = h +1
+m = 0
+}
+
+q=setTimeout("quizCount()", 1000)
+if (m>18)
+{ 
+
+$(document).ready(function(){
+    $('#tablechangeColor').each(function(){
+        if ($(this).text() == 'N') {
+            $(this).css('background-color','#f00');
+        }
+    });
+});
+
+}
+
+if (m<0)
+{
+
+}
+}
+function quizStop()
+{
+
+h = 0
+m = 0
+s = 0
+clearTimeout(q)
+document.getElementById('ahthigh').value="Average Holding Time!!!"
+}
+
+
+
+
+
+/*function myOutcome()
+{
+	document.getElementById("cxend").value = "**SP**\n-adv that the case will be open for 72 hours\n-adv we will make a call 
+
+
+}
+*/
+/*##############################################################################################################################################*/
+/*EXAMPLE
+
+-powerdrain
+-check novo button
+-load optimal defauls
+
+add "\n" before the phrase , follow the example below
+
+\n-powerdrain
+\n-check novo button
+\n-load optimal defauls
+
+Great! now make this phrase as one line
+
+\n-powerdrain\n-check novo button\n-load optimal defauls
+
+now copy the output and put it between the two double qoute ( " \n-powerdrain\n-check novo button\n-load optimal defaults " )
+Example
+ document.getElementById("cxtrouble").value +"\nYour Preloaded Notes for SP"
+
+*/
+/*##############################################################################################################################################*/
+
+/*For SP*/
+function myFunction1 (num) {
+    
+    
+    var hi= confirm("Do you want to continue?");
+    if (hi== true){
+        document.getElementById("cxtrouble").value= document.getElementById("cxtrouble").value +"\nYour Preloaded Notes for SP"
+    }else{
+        return false;
+    }
+}
+
+/*For OOW*/
+function myFunction2 (num) {
+ 
+    var hi= confirm("Do you want to continue?");
+    if (hi== true){
+        document.getElementById("cxtrouble").value= document.getElementById("cxtrouble").value +"\nYour Preloaded Notes for OOW"
+        document.getElementById("cxend").value= document.getElementById("cxend").value +"Refer to Localtech or BBY"
+    }else{
+        return false;
+    }
+}
+
+/*For FOP*/
+function myFunction3 (num) {
+    
+    var hi= confirm("Do you want to continue?");
+    if (hi== true){
+        document.getElementById("cxtrouble").value= document.getElementById("cxtrouble").value +"\nYour Preloaded Notes for FOP"
+        document.getElementById("cxend").value= document.getElementById("cxend").value +"FOP"
+    }else{
+        return false;
+    }
+}
+
+/*For CRM ESCAL*/
+function myFunction4 (num) {
+  
+    var hi= confirm("Do you want to continue?");
+    if (hi== true){
+        document.getElementById("cxtrouble").value= document.getElementById("cxtrouble").value +"\nYour Preloaded Notes for ESCALATE to CRM"
+        document.getElementById("cxend").value= document.getElementById("cxend").value +"ESCALATE TO CRM"
+    }else{
+        return false;
+    }
+}
+
+/*For CRU*/
+function myFunction5 (num) {
+    
+     var hi= confirm("Do you want to continue?");
+    if (hi== true){
+        document.getElementById("cxtrouble").value= document.getElementById("cxtrouble").value +"\nYour Preloaded Notes for CRU"
+        document.getElementById("cxend").value= document.getElementById("cxend").value +"CRU"
+    }else{
+        return false;
+    }
+}
+
+/*For DEP 1LEG*/
+function myFunction6 (num) {
+
+    
+    var hi= confirm("Do you want to continue?");
+    if (hi== true){
+        document.getElementById("cxprob").value= document.getElementById("cxprob").value + "\nYour Preloaded Notes for DEP 1LEG"
+        
+            document.getElementById("cxtrouble").value= document.getElementById("cxtrouble").value +"\nYour Preloaded Notes for DEP 1LEG"
+        
+            document.getElementById("cxend").value= document.getElementById("cxend").value + "\nDEPOT 1LEG"
+    }else{
+        return false;
+    }
+}
+
+/*For Dep 3LEG*/
+function myFunction7 (num) {
+      
+    var hi= confirm("Do you want to continue?");
+    if (hi== true){
+        document.getElementById("cxprob").value= document.getElementById("cxprob").value + "\nYour Preloaded Notes for DEP 3LEG"
+    document.getElementById("cxtrouble").value= document.getElementById("cxtrouble").value +"\nYour Preloaded Notes for DEP 3LEG"
+    document.getElementById("cxend").value= document.getElementById("cxend").value + "\nDEPOT 3LEG"
+    }else{
+        return false;
+    }
+}
+
+/*For Power Issue*/
+function myFunction8 (num){
+    
+     var hi= confirm("Do you want to continue?");
+    if (hi== true){
+        document.getElementById("cxtrouble").value= document.getElementById("cxtrouble").value + "\nYour Preloaded Notes for No POWER ISSUE"
+    }else{
+        return false;
+    }
+}
+
+
+/*For No Boot*/
+function myFunction9 (num){
+    
+    var hi= confirm("Do you want to continue?");
+    if (hi== true){
+        document.getElementById("cxtrouble").value= document.getElementById("cxtrouble").value + "\nYour Preloaded Notes for No Boot"
+        document.getElementById("cxend").value= document.getElementById("cxend").value + "\nSOLVE PENDING - OKR"
+    }else{
+        return false;
+    }
+}
+
+
+/*Connection Issue*/
+function myFunction11 (num){
+
+
+    var hi= confirm("Do you want to continue?");
+    if (hi== true){
+        document.getElementById("cxtrouble").value= document.getElementById("cxtrouble").value + "\nYour Preloaded Notes for Connection Issue"
+        document.getElementById("cxend").value= document.getElementById("cxend").value + "EOC"
+    }else{
+        return false;
+    }
+}
+
+
+/*Dep FFUP*/
+function myFunction12 (num){
+
+    
+    var hi= confirm("Do you want to continue?");
+    if (hi== true){
+        document.getElementById("cxprob").value= document.getElementById("cxprob").value + "\nYour Preloaded Notes for DEP FFUP"
+        document.getElementById("cxend").value= document.getElementById("cxend").value + "EOC"
+    }else{
+        return false;
+    }
+}
+
+function myFunction13 (num) {
+
+
+    var hi= confirm("Do you want to continue?");
+    if (hi== true){
+        document.getElementById("cxtrouble").value= document.getElementById("cxtrouble").value +"\nYour Preloaded Notes OKR"
+        
+            document.getElementById("cxend").value= document.getElementById("cxend").value +"\nYour Preloaded Notes"
+    }else{
+        return false;
+    }
+}
+
+
+/*Ghost Call*/
+function myFunction14 (num) {
+	
+
+    var hi= confirm("Do you want to continue?");
+    if (hi== true){
+        document.getElementById("cxname").value= "N/A"
+        document.getElementById("cxphone").value= "N/A"
+        document.getElementById("cxemail").value= "N/A"
+        
+        document.getElementById("cxserial").value= "N/A"
+        document.getElementById("cxmodel").value= "N/A"
+        document.getElementById("cxmtype").value= "N/A"
+        document.getElementById("cxOS").value= document.getElementById("cxOS").value +"N/A"
+        document.getElementById("cxdop").value= "N/A"
+        document.getElementById("cxdope").value= "N/A"
+    
+        document.getElementById("completeAddress").value= "N/A"
+        document.getElementById("cxerror").value= "N/A"
+        document.getElementById("cxlast").value= "N/A"
+        document.getElementById("cxtrouble").value= "N/A"
+        document.getElementById("cxprob").value= document.getElementById("cxprob").value +"No Caller on the line\nProvide Ghost Spiel"
+    
+        document.getElementById("cxend").value= document.getElementById("cxend").value +"Ghost Call"
+    }else{
+        return false;
+    }
+}
+
+
+/*Thinkpad Department*/
+function myFunction15 (num) { 
+
+
+    var hi= confirm("Do you want to continue?");
+    if (hi== true){
+        document.getElementById("cxserial").value= "N/A"
+        document.getElementById("cxmodel").value= "N/A"
+        document.getElementById("cxmtype").value= "N/A"
+        document.getElementById("cxOS").value= document.getElementById("cxOS").value +"N/A"
+        document.getElementById("cxdop").value= "N/A"
+        document.getElementById("cxdope").value= "N/A"
+    
+        document.getElementById("completeAddress").value= "N/A"
+        document.getElementById("cxerror").value= "N/A"
+        document.getElementById("cxlast").value= "N/A"
+        document.getElementById("cxtrouble").value= "N/A"
+        document.getElementById("cxprob").value= document.getElementById("cxprob").value + "\n-upon checking cx has a ThinkPad Machine\n-adv cx that we will transfer the call to TP\n-provide TP number (1-800-932-0465)"
+    
+        document.getElementById("cxend").value= document.getElementById("cxend").value +"Transfer Call to ThinkPad Department"
+    }else{
+        return false;
+    }
+}
+
+/*PFS*/
+function myFunction16 (num) {
+   
+
+    var hi= confirm("Do you want to continue?");
+    if (hi== true){
+        document.getElementById("completeAddress").value= "N/A"
+        document.getElementById("cxerror").value= "N/A"
+        document.getElementById("cxlast").value= "N/A"
+       /* document.getElementById("cxtrouble").value= "N/A"*/
+        document.getElementById("cxprob").value= document.getElementById("cxprob").value + "\n-adv cx that this issue or concern can be handled by the Software Deptartment (Premium Support Department)\n-provide PFS phone no.\n-(855)-271-3878 opens Everyday\n-Office Hours: 8:00 A.M. - 12:00 A.M. EST \n-cx agree\n-EOC"
+    
+        document.getElementById("cxend").value= document.getElementById("cxend").value +"Transfer the call to PFS"
+    }else{
+        return false;
+    }
+}
+
+
+function myFunction17(num) {
+  
+    var hi= confirm("Do you want to continue?");
+    if (hi== true){
+        document.getElementById("cxerror").value= "N/A"
+        document.getElementById("cxlast").value= "N/A"
+    }else{
+        return false;
+    }
+}
+
+/*PARTS ON HOLD*/
+function myFunction18 (num) {
+
+    var hi= confirm("Do you want to continue?");
+    if (hi== true){
+        document.getElementById("cxprob").value= document.getElementById("cxprob").value +"\nYour Preloaded Notes DEPPAH"
+        
+            document.getElementById("cxend").value= document.getElementById("cxend").value +"EOC"
+    }else{
+        return false;
+    }
+}
+
+
+/*CRM FFUP*/
+function myFunction19 (num) {
+   
+
+    var hi= confirm("Do you want to continue?");
+    if (hi== true){
+        document.getElementById("cxprob").value= document.getElementById("cxprob").value +"\nYour Preloaded Notes CRMFFUP"
+
+        document.getElementById("cxend").value= document.getElementById("cxend").value +"EOC"
+    }else{
+        return false;
+    }
+}
+
+
+/*Call Back*/
+function myFunction20 (num) {
+    var hi= confirm("Do you want to continue?");
+    if (hi== true){
+        document.getElementById("cxprob").value= document.getElementById("cxprob").value + "\n\n-Call got disconnected \n-Call back Approved by: " + document.getElementById("approverDispatch").value + "\nTime Stamp: "+ document.getElementById("cxtime").value  ;
+    }else{
+        return false;
+    }
+}
+
+function myFunction (button) {
+    var x = button.id;
+    switch (x) {
+        case '1':
+            myFunction1(x);
+            break;
+        case '2':
+            myFunction2(x);
+            break;
+        case '3':
+            myFunction3(x);
+            break;
+        case '4':
+            myFunction4(x);
+            break;
+        case '5':
+            myFunction5(x);
+            break;
+        case '6':
+            myFunction6(x);
+            break;
+        case '7':
+            myFunction7(x);
+            break;
+        case '8':
+            myFunction8(x);
+            break;
+        case '9':
+            myFunction9(x);
+            break;
+        case '10':
+            myFunction10(x);
+            break;
+        case '11':
+            myFunction11(x);
+            break;
+        case '12':
+            myFunction12(x);
+            break;
+        case '13':
+            myFunction13(x);
+            break;
+        case '14':
+            myFunction14(x);
+            break;
+        case '15':
+            myFunction15(x);
+            break;
+
+       case '16':
+            myFunction16(x);
+            break;
+
+        case '17':
+            myFunction17(x);
+            break;
+
+        case '18': /*for the DEPPAH*/
+            myFunction18(x);
+            break;
+
+        case '19': /*for the CRMFFUP*/
+            myFunction19(x);
+            break;
+
+        case '20': /*for the CRMFFUP*/
+            myFunction20(x);
+            break;
+
+        default:
+            return false;
+    }
+}
+</script>
+
+<script>
+    function copyAll()
+    {
+    var x = document.getElementById('theoutput')
+    var y = document.getElementById('theoutput').value
+
+    x.value = y;
+    var rng = x.createTextRange(); 
+    rng.select();  
+    rng.execCommand("Copy");
+    }
+</script>
+
+</head>
+
+<body >
+       <!--  <marquee bgcolor="red"TEXT="black" loop="-1" scrollamount="8" width="100%"> <font color=white face=Tahoma Size="6"><strong>LENOVO ONSITE TEAM    </strong></font><font color=white face=Tahoma size="4">REMINDER: ALWAYS send RDVD request with HDD Dispatches and complete documentation.</font></A><br>
+        </Marquee>   -->
+<div id="myHead">
+
+<table >
+        
+	<td>*Agent ID:</td>
+    <td><input class="ci" id="cxagent" onkeyup="gen();" onchange="gen();"><span style="color:  #407400 ; font-family: Tahoma;">======000000000</span></td>
+    
+    <!-- <td><input type="button" onclick="deLeteThis() ;  " value="Reset" class="btn btn-success" style = "background: 	#a52712"  > 
+        <span class="glyphicon glyphicon-search"></span>
+        
+    </td> -->
+    
+    
+    <td>
+            <button  type="button" class="btn btn-danger" onclick="deLeteThis();">
+             <span class="glyphicon glyphicon-trash"></span> 
+            </button>
+    </td>
+   
+    <td>
+        <a data-toggle="modal" href="#myNodal" class="btn btn-success" style = "background: #0E3488">
+            <span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span>
+        </a>
+    </td>
+
+  
+
+        <td>
+                <a data-toggle="modal" href="#myCRM" class="btn btn-success" style = "background: #0E3488">
+                    <span class="glyphicon glyphicon-user" aria-hidden="true"> CRM</span>
+                </a>
+            </td>
+
+            <!-- <td><a data-toggle="modal" href="#myModal" class="btn btn-success" style = "background: #2A3990"><i class="icon-plus"></i>QA </a></td> -->
+    
+            <td>
+                <div>
+                        <form action="#">
+                                     <button   style = "background: #0E3488;color :#fff" type="button" class="btn btn-infomation" onclick="getTheEndTime(this); gen(); copyAll();">
+                                             <span class="glyphicon glyphicon-copy"aria-hidden="true"> Copy</span> 
+                                     </button>
+    
+                                   
+                 
+                                     <!-- <td ><input type="button" name="Button" value="" onClick="getTheEndTime(this); gen();copyAll();" class="btn btn-success" value="Submit Button" style = "background: #61902a ; width: 200px; " ></td> -->
+                                     <td><input type="hidden" name="txtEndTime" id="cxEndTime" onKeyUp="gen();" onChange="gen();" class="ci"></td>
+                             </form>
+                             
+                </div>
+                    
+                    
+            </td>
+</table>
+
+</div>
+
+<table>
+</table>
+
+ <table>
+     <tr>
+        <td valign="top" align="center">
+
+        <table style="font-size: 11px;width:300px;">
+
+        <!-- Outcome Dispositioning: -->
+        <form name="MyForm" action="http://www.java2s.com/" method="Post">
+
+            <br>
+            
+        
+            <button type="button" onclick="myFunction(this); gen();" id="6">DEP1LEG</button>
+            <button type="button" onclick="myFunction(this); gen();" id="7">DEP3LEG</button>
+            <button type="button" onclick="myFunction(this); gen();" id="1">SP</button>
+            <button type="button" onclick="myFunction(this); gen();" id="2">OOW</button>
+            <button type="button" onclick="myFunction(this); gen();" id="3">FOP</button>
+            <button type="button" onclick="myFunction(this); gen();" id="4">CRM</button>
+            <button type="button" onclick="myFunction(this); gen();" id="5">CRU</button>
+            <button type="button" onclick="myFunction(this); gen();" id="12">DEPFFUP</button>
+            <button type="button" onclick="myFunction(this); gen();" id="18">DEPPAH</button>
+            <button type="button" onclick="myFunction(this); gen();" id="19">CRMFFUP</button>
+            <button type="button" onclick="myFunction(this); gen();" id="13">OKR</button>
+            <button type="button" onclick="myFunction(this); gen();" id="15">THINKPAD</button>
+            <button type="button" onclick="myFunction(this); gen();" id="16">PFS</button>
+            <button type="button" onclick="myFunction(this); gen();" id="11">!CNT</button>
+            <button type="button" onclick="myFunction(this); gen();" id="8">!PWR</button>
+            <button type="button" onclick="myFunction(this); gen();" id="10">!DSP</button>
+            <button type="button" onclick="myFunction(this); gen();" id="9">!BOOT</button>
+            <!-- <button type="button" onclick="myFunction(this); gen();" id="17">NA</button>  -->
+            <button type="button" onclick="myFunction(this); gen();" id="20">Call Back</button> 
+            <button type="button" onclick="myFunction(this); gen();" id="14">Ghost Call</button>
+            
+    </tr>
+                
+          <br>      
+        <tr>
+            <td ><input type="button" name="Button" value="Current Time" onClick="getTheDate(this);gen() ; quizCount()" class="btn btn-success" value="Submit Button" style = "background: #61902a ; width: 200px; " ></td>
+            <td><input type="text" name="txtDate" id="cxtime" onKeyUp="gen();" onChange="gen();" class="ci"></td>
+        </tr>
+
+       
+
+        <tr><td class="titleMy">*SR: </td><td><input class="ci" id="cxsr" onkeyup="gen();" onchange="gen();"></td></tr>
+        <tr><td class="titleMy">*SO: </td><td><input class="ci" id="cxso" onkeyup="gen();" onchange="gen();"></td></tr>
+        
+        <tr><td colspan="2"><br><b>Customer Information:</b></td></tr>
+        <tr><td class="titleMy">*Name: </td><td><input class="ci" id="cxname" onkeyup="gen();" onchange="gen();"></td></tr>
+        <tr><td class="titleMy">*Mobile number: </td><td><input class="ci" id="cxphone" onkeyup="gen();" onchange="gen();"></td></tr>
+        <tr><td class="titleMy">*Alternate: </td><td><input class="ci" id="cxaltphone" onkeyup="gen();" onchange="gen();"></td></tr>        
+        <tr><td class="titleMy">*Email: </td><td><input class="ci" id="cxemail" onkeyup="gen();" onchange="gen();"></td></tr>
+        <tr><td colspan="2"><br><b>Machine Information:</b></td></tr>
+        <tr><td class="titleMy">*Serial: </td><td><input class="ci" id="cxserial" onkeyup="gen();" onchange="gen();"></td></tr>
+        <tr><td class="titleMy">*Model: </td><td><input size="18" class="ci" id="cxmodel" onkeyup="gen();" onchange="gen();"></td></tr>
+        <tr><td class="titleMy">*Type: </td><td><input size="15" class="ci" id="cxmtype" onkeyup="gen();" onchange="gen();"></td></tr>
+        <tr><td class="titleMy">OS: </td><td><select onChange="gen();" onKeyUp="gen();" ID="cxOS" class="ci">
+            <option value=" "> </option>
+            <option value="Windows 10">Windows 10</option>
+            <option value="Windows 8.1">Windows 8.1 </option>
+            <option value="Windows 7">Windows 7</option>
+            <option value="Chrome OS">Chrome OS</option>
+            <option value="Android">Android</option>
+        </select></td></tr>
+        <tr><td class="titleMy">*Date of Purchase: </td><td><input class="ci" id="cxdop" onkeyup="gen();" onchange="gen();"></td></tr>
+        <tr><td class="titleMy">*Warranty Expiration: </td><td><input class="ci" id="cxdope" onkeyup="gen();" onchange="gen();"></td></tr>
+        <tr><td colspan="2"><br><b>Other Information:</b></td></tr>
+        <tr>
+            <td class="titleMy">*Complete Address</td>
+                <td>
+                <textarea name="completeAddress" id="completeAddress" style="width: 150px; height: 100px; font-size: 15px;" onChange="gen();" onKeyUp="gen();" class="ci"></textarea>
+                </td>	
+            </td>
+        </tr> 
+
+        <tr><td class="titleMy">Street: </td><td><input id="cxstreet" onKeyUp="gen();" onChange="gen();" class="ci"></td></tr>
+        <tr><td class="titleMy">City: </td><td><input id="cxcity" onKeyUp="gen();" onChange="gen();" class="ci"></td></tr>
+        <tr><td class="titleMy">State: </td><td><input id="cxstate" onKeyUp="gen();" onChange="gen();" class="ci"></td></tr>
+        <tr><td class="titleMy">ZIP: </td><td><input id="cxzip" onChange="gen();" onKeyUp="gen();" maxlength="7" class="ci"></td></tr>
+        <tr><td class="titleMy">Country: </td><td><input id="cxcountry" onKeyUp="gen();" onChange="gen();" class="ci"></td></tr>
+        <tr><td colspan="2"><br>&nbsp;</td></tr>
+        
+        <tr><td class="titleMy">Parts to Check:</td><td><input id="cxApp" onKeyUp="gen();" onChange="gen();" class="ci"></td></tr>
+
+        
+
+
+    </tr>
+</tr>
+
+
+
+	
+
+</table>
+
+
+
+
+ </td>
+ 
+
+ <td valign="top">
+
+
+ 
+ 
+ <table>
+    <tr>
+    <td>
+
+           
+                   <!--  <input type="radio" name="output2" value="DEP"  data-toggle="modal" data-target="#DEPModal"> DEP
+                    <input type="radio" name="output2" value="CIN" data-toggle="modal" data-target="#CINModal"> CIN
+                    <input type="radio" name="output2" value="CRU" data-toggle="modal" data-target="#CRUModal"> CRU
+                    <input type="radio" name="output2" value="ONS" data-toggle="modal" data-target="#ONSModal"> ONS
+                    <input type="radio" name="output2" value="N/A" checked> N/A
+                    <input type="checkbox" name="output2" value="CRM" data-toggle="modal" data-target="#CRMModal">CRM -->
+                
+    
+   <!--  <input type="radio" name="outputtype2"  onclick="alert('\n••••DEPOT REMINDERS•••\n\n•Get alternate phone number\n•Verify shipping address for depot/cru or service address for onsite service\•Verify if customer can receive email\n•Verify and send email (Disclaimers/ICS\n\n•••Discuss over the phone (DEP):•••\n\n•1.) Shipping method and TAT\n•2.) Include AC adapter and power cord\n•3.) Data loss disclaimer\n•4.) Take a picture of the machine\n•5.) CID\n•6.) Password\n•7.)Provide Case number and SO (Service Order Number)\n•8.)Serial Number and repairstatus website\n\n•Promote callback request (www.lenovo.com/contact)\n•Offer Survey to transfer to IVR'); gen();">DEP &nbsp &nbsp
+    <input type="radio" name="outputtype2" onclick="alert('\nCARRY IN REMINDERS\n\n•Advise customer to call Best Buy branch first to check if carry-in service is available and to set up an appointment.\n•Advise customer to take a picture or printout of warranty entitlement from our website.\n•Provide case number\n•Promote callback request (www.lenovo.com/contact)\n•offer to transfer to IVR'); gen();">CIN &nbsp &nbsp
+    <input type="radio" name="outputtype2" onclick="alert('ONS DISCLAIMERS:\n• Back Up Files\n• Turn Around time is 3 business days.\n•Back files if possible\n•Get alternate phone number\n•Verify shipping address for depot/cru or service address for onsite service \n•Verify if customer can receive email\n•Promote callback request (www.lenovo.com/contact)\n•Offer to transfer to IVR '); gen();">ONS &nbsp &nbsp
+    <input type="radio" name="outputtype2" onclick="alert('CRU DISCLAIMERS:\n• Advise customer will receive email and/or text message.\n•Parts Delivery is 3 business days.\n• If customer received a shipping label they are required to return the part.\n•Adv customer to return the defective unit using the same box if RMA label is found inside, if none found, customer may keep the part.\n• Provide Hardware Maintenance Manual and www.lenovoservicetraining.com');gen();">CRU &nbsp &nbsp
+    <input type="radio" name="outputtype2" checked onClick="gen();">N/A &nbsp &nbsp
+    <input type="checkbox" name="outputtype3" onClick="gen();">CRM  -->
+    <input type="radio" name="outputtype2"  data-toggle="modal" data-target="#CINModal" onclick="alert('\nCARRY IN REMINDERS\n\n•Advise customer to call Best Buy branch first to check if carry-in service is available and to set up an appointment.\n•Advise customer to take a picture or printout of warranty entitlement from our website.\n•Provide case number\n•Promote callback request (www.lenovo.com/contact)\n•offer to transfer to IVR'); gen();">CIN &nbsp &nbsp
+    <input type="radio" name="outputtype2" value="DEP"  data-toggle="modal" data-target="#DEPModal" >DEP &nbsp &nbsp
+    <input type="radio" name="outputtype2" value="CIN" data-toggle="modal" data-target="#CINModal">CIN &nbsp &nbsp
+    <input type="radio" name="outputtype2" value="CRU" data-toggle="modal" data-target="#CRUModal">ONS &nbsp &nbsp
+    <input type="radio" name="outputtype2" value="ONS" data-toggle="modal" data-target="#ONSModal">CRU &nbsp &nbsp
+    <input type="radio" name="outputtype2" checked onClick="gen();">N/A &nbsp &nbsp
+    <input type="checkbox" name="outputtype3" onClick="gen();" value="CRM" data-toggle="modal" data-target="#CRMModal">CRM 
+
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary" value="DEP"  data-toggle="modal" data-target="#DEPModal">DEP</button>
+            <button type="button" class="btn btn-primary">Samsung</button>
+            <button type="button" class="btn btn-primary">Sony</button>
+          </div>
+    </td>
+    </tr>
+
+    
+    <tr>
+        <td>
+           <b>Case Approver: </b>
+                <select  onChange="gen();" onKeyUp="gen();" ID="approverDispatch" class="ci" style=" width: 200px; " >
+                <option value="       "> </option> 
+                <option value="Romeo Velasquez">Romeo Velasquez PH######</option>
+                <option value="Ron Capulong PH######">Ron Capulong PH######</option>
+                <option value="Cornelio Elegado - PH054723">Cornelio Elegado - PH054723</option>
+                <option value="John Louie Go - 122424">John Louie Go - 122424</option> 
+                <option value="Ryan Gamayo -PH049646">Ryan Gamayo -PH049646</option>
+                <option value="Ernest Chua">Ernest Chua PH######</option>
+                <option value="Arnel Papa">Arnel Papa PH######</option> 
+                <option value="Cubao SME">Cubao SME PH######</option>
+                <option value="Cubao TM">Cubao TM PH######</option> 
+        </td>
+    </tr>
+</table>
+
+<br>
+		  <b><span style= " font-family: sans-serif, 'Courier New'; font-size: 11px; text-align: left !important;">Problem Description </span></b><br>
+          <textarea name="cxprob" id="cxprob" onChange="gen();" onKeyUp="gen();" class="ci" style="width: 300px; height: 200px; font-size: 14px;font-family: arial; "></textarea>
+        
+          <b>ERROR Message:</b><br>
+          <textarea name="cxerror" id="cxerror" style="width: 300px; height: 40px; font-size: 14px;font-family: arial;" onChange="gen();" onKeyUp="gen();" class="ci"></textarea>
+         
+          <b>Last change done to the machine</b><br>
+          <textarea name="cxlast" id="cxlast" style="width: 300px; height: 40px; font-size: 14px;font-family: arial;" onChange="gen();" onKeyUp="gen();" class="ci"></textarea>
+         
+          <b>Troubleshooting steps done</b><br>
+          <textarea name="cxtrouble" id="cxtrouble" style="width: 300px; height: 320px; font-size: 14px;font-family: arial;" onChange="gen();" onKeyUp="gen();" class="ci"></textarea>
+         
+          <b>End Resolution: </b> <br>
+          <textarea name="cxend" id="cxend" style=" width: 300px; height: 100px; font-size: 13px;font-family: arial; " onChange="gen();" onKeyUp="gen();" class="ci"></textarea>
+           <br>
+          <br>
+ </td>
+
+
+<td valign="top" align="left">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</br>
+</br>&nbsp;&nbsp;
+<!-- <input type="button" onclick="deLeteThis() ;  " value="Reset" class="btn btn-success" style = "background: 	#a52712"  > --> 
+<!-- <td class="y_n"></td> -->
+
+<!-- <a data-toggle="modal" href="#myNodal" class="btn btn-success" style = "background: #61902a"><i class="icon-plus"></i>Phone Numbers</a> -->
+<div class="modal fade" id="myNodal" tabinex="-1" role=	"dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header" style = "background-color: #000000;" >				
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Phone Numbers</h4>
+             </div>
+							<center>
+							<textarea  style="margin-top: 3px;padding: 5px;background-color: #72C972 ;overflow: auto;margin-left: 10px; border: 0px;width: 500px; height: 90px; font-size: 13px;font-face: arial;" readonly>
+IdeaPad (3000 H, K, Q, G, U, and Y)
+US/Canada
+Available 24/7	1-877-4LENOVO (1-877-453-6686)
+
+							</textarea>
+							
+							<textarea style="margin-top: 3px;padding: 5px;background-color: #72C972 ;overflow: auto;margin-left: 10px; border: 0px;width: 500px; height: 120px; font-size: 13px;font-face: arial;" readonly>
+ThinkPad Phone Numbers
+US/Canada Internal/warm transfer (1-800-426-7378) please do not provide this number to the customer.
+
+US/Canada   Number that you can provide to the customer (1-800-932-0465)
+Australia	1-300-880-917
+							</textarea>
+							
+							
+							<textarea style="margin-top: 3px;padding: 5px;background-color: #72C972 ;overflow: auto;margin-left: 10px; border: 0px;width: 500px; height: 100px; font-size: 13px;font-face: arial;" readonly>
+Sales
+Sales Inquiries
+Mon-Fri 9am-7pm EST	1-866-968-4465
+
+Post Sales Inquiries
+Mon-Fri 9am-7pm EST	1-855-253-6686						
+							</textarea>
+							<textarea style="margin-top: 3px;padding: 5px;background-color: #72C972;overflow: auto;margin-left: 10px; border: 0px;width: 500px; height: 90px; font-size: 13px;font-face: arial;" readonly>
+Microsoft
+Microsoft Sales & Information
+Hours: 6:00 A.M. - 6:00 P.M.
+Pacific Time, Monday through Friday	(800)-642-7676
+			
+							</textarea>
+							
+							<textarea style="margin-top: 3px;padding: 5px;background-color: #72C972 ;overflow: auto;margin-left: 10px; border: 0px;width: 500px; height: 150px; font-size: 13px;font-face: arial;" readonly>
+PFS DIRECT
+LENOVO PFS
+Hours: 8:00 A.M. - 12:00 A.M. EST
+Everyday 	
+Consultant should provide (855)-271-3878 to the customer.
+
+(877)-737-1082 - internal transfer
+
+							</textarea>
+				
+							
+							<textarea style="margin-top: 3px;padding: 5px;background-color: #72C972 ;overflow: auto;margin-left: 10px; border: 0px;width: 500px; height: 90px; font-size: 13px;font-face: arial;" readonly>
+Proof Of Purchase (POP)
+Email Address:	Lenovo_pop@suth.com
+
+							</textarea>
+
+							<textarea style="margin-top: 3px;padding: 5px;background-color: #72C972 ;overflow: auto;margin-left: 10px; border: 0px;width: 500px; height: 200px; font-size: 13px;font-face: arial;" readonly>
+Dummy Address:
+For US Customers: 
+Street:x  
+City:   x
+State:  CA
+ZIP:   90210
+Country:  US
+
+For CANADA Customers
+Street:x  
+City:   x
+State: ON
+ZIP:    P1A 0E7
+Country: CA
+
+</textarea>
+</center>
+							
+		<div class="modal-footer" style = "background-color: #000000;" >
+          <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+        </div>
+	</div>
+  </div>				
+</div>
+
+
+
+
+<!-- 
+********************************************************************************************************************************
+QA REMINDER
+******************************************************************************************************************************** -->
+<!-- <a data-toggle="modal" href="#myModal"  style = "background: gray" ><i class="icon-plus"></i></a> -->
+ <div class="modal fade" id="myModal" tabinex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header" style = "background-color: #000000;" >			
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">QA REMINDERS</h4>
+
+          <a class="y" target="_blank" href="http://myservice.servms.com/myService/WebLogin.aspx?LoginType=SMS">My Service</a>
+          <a class="y" href="#">Case Tagging</a>
+
+        
+
+        </div>
+		<center>
+		<textarea id="crmoutput" style="background-color: #92BB5C;overflow: auto; width:500px; height: 500px; font-size: 14px;font-family:'tahoma';" >
+Dispatch Reminders
+- get alternate phone number
+- verify shipping address for depot/cru or service address for onsite service 
+- verify if customer can receive email
+- verify and send email (Disclaimers/ICS)
+
+Discuss over the phone (DEPOT REMINDERS): 
+1.) Shipping method and TAT
+2.) Include AC adapter and power cord
+3.) Data loss disclaimer               
+4.) Take a picture
+5.) CID
+6.) Password 
+7.) Serial Number and repairstatus website
+
+		</textarea>
+		</center>
+							
+		<div class="modal-footer" style = "background-color: #000000;" >
+          <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+        </div>
+	   </div>
+	</div>				
+</div>
+
+
+
+<!-- Reminders -->
+ <!-- Modal FOR DEP -->
+ <div class="modal fade" id="DEPModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">DEPOT REMINDERS</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        ...
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+        </div>
+    </div>
+    </div>
+</div><!--END Modal FOR DEP--> 
+
+
+<!-- Modal FOR CIN -->
+<div class="modal fade" id="CINModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">CARRY IN REMINDERS</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        ...
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+        </div>
+    </div>
+    </div>
+</div><!--END Modal FOR CIN--> 
+
+<!-- Modal FOR CRU -->
+<div class="modal fade" id="CRUModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">CARRY IN REMINDERS</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        ...
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+        </div>
+    </div>
+    </div>
+</div><!--END Modal FOR CRU--> 
+
+<!-- Modal FOR ONS -->
+<div class="modal fade" id="ONSModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">CARRY IN REMINDERS</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        ...
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+        </div>
+    </div>
+    </div>
+</div><!--END Modal FOR ONS--> 
+
+
+<!-- Modal FOR ABOUT -->
+<div class="modal fade" id="AboutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Lenovo Notes Maker</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+            <p>a tool to create a organized and proper documentation.</p>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+        </div>
+    </div>
+    </div>
+</div><!--END Modal FOR ABOUT--> 
+
+
+<!-- CRM -->
+
+<!-- CRM-********************************************************************************************************************* -->
+<div class="modal fade" id="myCRM" tabinex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header" style = "background-color: #000000;" >			
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h3>FOR CRM TEMPLATE</h3>
+    
+              
+                <br><br>
+                <table name = "crmTable" style="margin-left:100px;"> <!-- crmtable -->
+                    <tr><td class="titleMy">*Hold for Parts: </td>
+                        <td><select onChange="gen();" onKeyUp="gen();" ID="crmHoldforParts" class="ci">
+                            <option value="       "> </option> 
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr><td class="titleMy">*Enter the part if yes: </td><td><input size="15" class="ci" id="cxmtype" onkeyup="gen();" onchange="gen();"></td></tr>
+                    <tr><td class="titleMy">*Where is the computer?</td>
+                        <td><select onChange="gen();" onKeyUp="gen();" ID="crmWhereIsComp" class="ci">
+                            <option value="       "> </option> 
+                            <option value="Customer">Cust</option>
+                            <option value="Depot">Dep</option>
+                            </select>
+                    
+                        </td>
+                    </tr>
+
+                    <tr><td class="titleMy">*With Warranty Extension?</td>
+                        <td><select onChange="gen();" onKeyUp="gen();" ID="cmrWextension" class="ci">
+                            <option value="       "> </option> 
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                            </select>
+                    
+                        </td>
+                    </tr>
+
+                    <tr><td class="titleMy">*POP Provided?</td>
+                        <td><select onChange="gen();" onKeyUp="gen();" ID="crmPopProvided" class="ci">
+                            <option value="       "> </option> 
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                            </select>
+                    
+                        </td>
+                    </tr>
+
+                    <tr><td class="titleMy">*Point of Purchased?</td>
+                        <td><select onChange="gen();" onKeyUp="gen();" ID="crmPointofPurchased" class="ci">
+                            <option value="       "> </option> 
+                            <option value="US">US</option>
+                            <option value="Canada">CA</option>  
+                            <option value="Lenovo">Lenovo</option>
+                            <option value="Best Buy">Best Buy</option>
+                            <option value="Amazon">Amazon</option>
+                            <option value="Microsoft">Microsoft</option>
+                            <option value="Other">Other</option>
+                            </select>
+                    
+                        </td>
+                    </tr>
+    
+                    <tr><td class="titleMy">*Customer Expectation</td>
+                        <td><select onChange="gen();" onKeyUp="gen();" ID="crmCxExpectation" class="ci">
+                            <option value="       "> </option> 
+                            <option value="RETURN">RETURN</option>
+                            <option value="REFUND">REFUND</option>  
+                            <option value="REPLACEMENT">REPLACEMENT</option>
+                            <option value="FREE REPAIR">FREE REPAIR</option> 
+                            <option value="FILE A COMPLAINT">FILE A COMPLAINT</option> 
+                            <option value="Other">Other</option>
+                            </select>
+                    
+                        </td>
+                    </tr>
+
+
+                    <tr><td class="titleMy">*Number of Systems Involved</td>
+                        <td><select onChange="gen();" onKeyUp="gen();" ID="crmNumberSysteminvolve" class="ci">
+                            <option value="       "> </option> 
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            </select>
+                    
+                        </td>
+                    </tr>
+                   
+                    <tr><td class="titleMy">*CRM Approver</td>
+                        <td><select onChange="gen();" onKeyUp="gen();" ID="crmApprover" class="ci">
+                            <option value="       "> </option> 
+                            <option value="Romeo Velasquez">Romeo Velasquez</option>
+                            <option value="Cornelio Elegado - PH054723">Cornelio Elegado - PH054723</option>
+                            <option value="John Louie Go - 122424">John Louie Go - 122424</option> 
+                            <option value="Rey Quimado -PH049639">Rey Quimado -PH049639</option>
+                            <option value="Ryan Gamayo -PH049646">Ryan Gamayo -PH049646</option>
+                            <option value="STM Ernest Chua">Ernest Chua</option>
+                            </select>
+                    
+                        </td>
+                    </tr>
+                         
+                  
+                 </table><!-- crmtable -->
+ 
+              
+    
+            </div>
+                               
+            <div class="modal-footer" style = "background-color: #2D7A00;" >
+              <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+            </div>
+           </div>
+        </div>				
+    </div>
+</br>
+
+
+
+
+
+<!-- THE OUTPUT -->
+<h1>Documentation</h1>
+
+<textarea id="theoutput"  style="margin-top: 3px;padding: 5px;background-color:#999999 ; overflow: auto;margin-left: 10px; border: 0px;width: 500px; height: 765px; font-size: 14px;font-face: arial;" readonly>
+</textarea>
+
+
+<br>
+<!-- NEW CRM TABLE -->
+ <td valign="right">
+    
+        <table name = "crmTable"> <!-- crmtable -->
+            <br><br><br><br><br>
+         <h2>FOR CRM TEMPLATE</h2>
+         
+            <td> <b>Hold for Parts?</b>
+            <select onChange="gen();" onKeyUp="gen();" ID="crmHoldforParts" class="ci" style=" width: 110px; ">
+                <option value="       "> </option> 
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <b>Enter the part if yes</b>
+                </br>
+                <input id="crmPartsonHold" onKeyUp="gen();" onChange="gen();" class="ci" style=" width: 110px; height: 50px;">
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <b>Where is the Computer?</b>
+                <select onChange="gen();" onKeyUp="gen();" ID="crmWhereIsComp" class="ci" style=" width: 110px; ">
+                    <option value="       "> </option> 
+                    <option value="Customer">Cust</option>
+                    <option value="Depot">Dep</option>
+                 </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <b>With Warranty Extension?</b>
+                <select onChange="gen();" onKeyUp="gen();" ID="cmrWextension" class="ci" style=" width: 110px; ">
+                    <option value="       "> </option> 
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+         <b>POP Provided?</b>
+        <select onChange="gen();" onKeyUp="gen();" ID="crmPopProvided" class="ci" style=" width: 110px; ">
+            <option value="       "> </option> 
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>  
+         </select>
+
+            </td>
+        </tr>
+             
+        <tr>
+            <td>     
+                 <b>Point of Purchase</b>
+                <select onChange="gen();" onKeyUp="gen();" ID="crmPointofPurchased" class="ci" style=" width: 110px; ">
+                    <option value="       "> </option> 
+                    <option value="US">US</option>
+                    <option value="Canada">CA</option>  
+                    <option value="Lenovo">Lenovo</option>
+                    <option value="Best Buy">Best Buy</option>
+                    <option value="Amazon">Amazon</option>
+                    <option value="Microsoft">Microsoft</option>
+                    <option value="Other">Other</option>
+                 </select>
+             </td>
+         </tr>
+         
+         <tr>
+            <td>
+             <b>Customer Expectation</b>
+            <select onChange="gen();" onKeyUp="gen();" ID="crmCxExpectation" class="ci" style=" width: 110px; ">
+                <option value="       "> </option> 
+                <option value="RETURN">RETURN</option>
+                <option value="REFUND">REFUND</option>  
+                <option value="REPLACEMENT">REPLACEMENT</option>
+                <option value="FREE REPAIR">FREE REPAIR</option> 
+                <option value="FILE A COMPLAINT">FILE A COMPLAINT</option> 
+                <option value="Other">Other</option>
+             </select>
+            </td>
+         </tr>
+         
+         <tr>
+             <td>
+                      <b>Number of Systems Involved</b>
+                      <select onChange="gen();" onKeyUp="gen();" ID="crmNumberSysteminvolve" class="ci" style=" width: 110px; ">
+                        <option value="       "> </option> 
+                        <option value="1">1</option>
+                        <option value="2">2</option>p
+                     </select>  
+             </td>
+         </tr>
+       
+
+
+         <tr>
+             <td>
+                    <b>CRM Approver</b>
+                     <select onChange="gen();" onKeyUp="gen();" ID="crmApprover" class="ci" style=" width: 110px; ">
+                        <option value="       "> </option> 
+                        <option value="Romeo Velasquez">Romeo Velasquez</option>
+                        <option value="Cornelio Elegado - PH054723">Cornelio Elegado - PH054723</option>
+                        <option value="John Louie Go - 122424">John Louie Go - 122424</option> 
+                        <option value="Rey Quimado -PH049639">Rey Quimado -PH049639</option>
+                        <option value="Ryan Gamayo -PH049646">Ryan Gamayo -PH049646</option>
+                        <option value="STM Ernest Chua">Ernest Chua</option>
+                    </select>
+             </td>
+         </tr>
+      
+     </table><!-- crmtable -->
+ 
+</td> 
+
+
+</td>
+</tr>
+
+
+</table>
+
+
+
+    <table border="1" width="1100" valign="top" style="display:none">
+        <th width="200px" valign="top">CRU DISCLAIMERS</th>
+        <th width="100px" valign="top">CIN DISCLAIMERS</th>
+        <th width="400px" valign="top">DEPOT DISCLAIMERS</th>
+        <th valign="top">ONSITE DISCLAIMERS</th>
+        
+        <tr>
+        <td valign="top" width="200px" >
+
+        <textarea name="CRUdisc" readonly id="CRUdisc" style="height:350px;width:100%;overflow:auto;border:0">
+CRU DISCLAIMERS:
+• Advise customer will receive email and/or text message • Parts Delivery is 3 business days.
+• If customer received a shipping label they are required to return the part
+• Adv customer to return the defective unit using the same box if RMA label is found inside, if none found, customer may keep the part.
+• Provide Hardware Maintenance Manual and www.lenovoservicetraining.com
+        </textarea></td>
+
+        <td valign="top" width="400px" >
+        <textarea name="DEPdisc" readonly id="DEPdisc" style="height:350px;width:90%;overflow:auto;border:0">
+DEPOT DISCLAIMERS:
+•take a picture of the machine
+•box shipped TAT 3BD applicable for 3LEG 
+•repair TAT 5BD
+•ICS send via email - READ,PRINT,FILL OUT,INSIDE THE BOX
+•CID reminders
+•Back up files
+•Password
+•Charger inside the box
+•provide SO - check online
+•support.lenovo.com/repairstatus
+        </textarea>
+        </td>
+         
+        <td valign="top"><textarea name="ONSdisc" readonly id="ONSdisc" style="height:350px;width:100%;overflow:auto;border:0">
+ONS DISCLAIMERS:
+• Back Up Files
+• Turn Around time is 3 business days.
+• There should be an adult 18 years above with all access for service
+• ONS will try to contact cust for 3 consec days. If ONS tech is unable to contact cust, they will leave a VM and a contact number. Inform cust to call the ONS tech back on the number provided.
+• The onsite tech will call the customer before 10:00AM on the day the service is entitled (either NBD or 2BD) or on another date that was confirmed by the customer. He will arrive between 9:00AM-5:00PM local time but may establish a specified time during his call with the customer.
+• If the on-site tech is not able to reach the customer, he will proceed to your location on the agreed date.
+• Onsite techs are also required to take the defective parts back with them.
+• ONS are only to replace the parts. For any SW troubleshooting, customer should contact Lenovo Warranty Support.
+        </textarea></td>
+
+
+<td valign="top"><textarea name="CINdisc" readonly id="CINdisc" style="height:350px;width:100%;overflow:auto;border:0">
+CIN DISCLAIMERS:
+• Advise customer to contact Bestbuy and set up a appointment
+• Advise customer to screenshot or take a photo or print the warranty entitlement from support.lenovo.com
+        </textarea></td>
+
+        </tr>
+    </table>
+	 
+ </td>
+</table>
+
+
+<!--  -->
+<script>
+function gen() 
+{
+	document.getElementById("theoutput").value = "";
+	document.getElementById("crmoutput").value = "";
+ 
+
+         
+        if (document.getElementById("cxagent").value.length != 0)
+         {
+        	document.getElementById("theoutput").value += "Agent ID: "+document.getElementById("cxagent").value;
+
+         }
+
+         if (document.getElementById("cxtime").value.length != 0)
+         {
+        	document.getElementById("theoutput").value += "\n\nTime Stamp: "+document.getElementById("cxtime").value;
+         }
+         
+         if (document.getElementById("cxEndTime").value.length != 0)
+         {
+        	document.getElementById("theoutput").value += "\nEnd Time: "+document.getElementById("cxEndTime").value;
+         }
+
+         if (document.getElementById("cxsr").value.length != 0)
+         {
+        	document.getElementById("theoutput").value += "\nCase Number: "+document.getElementById("cxsr").value;
+
+         }
+         
+         if (document.getElementById("cxso").value.length != 0)
+         {
+        	document.getElementById("theoutput").value += "\nSO: "+document.getElementById("cxso").value;
+
+         }
+         
+         if (document.getElementById("cxname").value.length != 0)
+         {
+        	document.getElementById("theoutput").value += "\n\nName: "+document.getElementById("cxname").value;
+
+         }
+
+         if (document.getElementById("cxphone").value.length != 0)
+         {
+        	document.getElementById("theoutput").value += "\nPhone: "+document.getElementById("cxphone").value;
+
+         }
+
+         if (document.getElementById("cxaltphone").value.length != 0)
+         {
+        	document.getElementById("theoutput").value += "\nAlternate Phone: "+document.getElementById("cxaltphone").value;
+        	
+         }
+         
+         if (document.getElementById("cxemail").value.length != 0)
+         {
+        	document.getElementById("theoutput").value += "\nEmail:"+document.getElementById("cxemail").value;
+        	
+         }
+         
+         
+        /*  System Information */
+         
+         if (document.getElementById("cxserial").value.length != 0)
+         {
+         document.getElementById("theoutput").value += "\n\nSerial: "+document.getElementById("cxserial").value;
+
+         }
+         
+         if (document.getElementById("cxmodel").value.length != 0)
+         {
+        	document.getElementById("theoutput").value += "\nModel: "+document.getElementById("cxmodel").value;
+        	
+         }
+         
+         if (document.getElementById("cxdop").value.length != 0)
+         {
+        	document.getElementById("theoutput").value += "\nDate of Purchase: "+document.getElementById("cxdop").value;
+
+         }
+         
+         if (document.getElementById("cxdope").value.length != 0)
+         {
+        	document.getElementById("theoutput").value += "\nWarranty End: "+document.getElementById("cxdope").value;
+        	
+         }
+         
+         if (document.getElementById("cxmtype").value.length != 0)
+         {
+        	document.getElementById("theoutput").value += "\nMachine Type: "+document.getElementById("cxmtype").value;
+        	
+         }
+         
+          if (document.getElementById("cxOS").value.length != 1)
+          {
+          document.getElementById("theoutput").value +="    \nOperating System: "+document.getElementById("cxOS").value;
+          }
+         
+             /* <!-- Address -->*/
+             if (document.getElementById("completeAddress").value.length !=0||document.getElementById("cxstreet").value.length !=0||document.getElementById("cxcity").value.length != 0 || document.getElementById("cxzip").value.length != 0 ||document.getElementById("cxstate").value.length != 0 ||document.getElementById("cxcountry").value.length != 0)
+             {
+            	document.getElementById("theoutput").value += "\n\nAddress: ";
+             }
+         
+             if (document.getElementById("completeAddress").value.length != 0) 
+             {
+            	document.getElementById("theoutput").value += " "+document.getElementById("completeAddress").value;
+             }
+
+             if (document.getElementById("cxstreet").value.length != 0) 
+             {
+            	document.getElementById("theoutput").value += " "+document.getElementById("cxstreet").value;
+             }
+             
+             if (document.getElementById("cxcity").value.length != 0) 
+             {
+            	document.getElementById("theoutput").value += " "+document.getElementById("cxcity").value;
+             }
+             if (document.getElementById("cxstate").value.length != 0)
+             {
+            	document.getElementById("theoutput").value += " "+document.getElementById("cxstate").value;
+             }
+             if (document.getElementById("cxzip").value.length != 0) 
+             {
+            	document.getElementById("theoutput").value += " "+document.getElementById("cxzip").value;
+             }
+             if (document.getElementById("cxcountry").value.length != 0) 
+             {
+            	document.getElementById("theoutput").value += " "+document.getElementById("cxcountry").value;
+             }
+         
+         /*<!-- Documentation-->*/
+         
+              if (document.getElementById("cxprob").value.length != 0)
+              { 
+            	document.getElementById("theoutput").value +="\n\nProblem Description (as explained by the customer):\n"+document.getElementById("cxprob").value;
+              }
+              
+              if (document.getElementById("cxerror").value.length != 0)
+              {
+            	document.getElementById("theoutput").value +="\n\nERROR Message:\n"+document.getElementById("cxerror").value;
+              }
+              
+              if (document.getElementById("cxlast").value.length != 0)
+              {
+            	document.getElementById("theoutput").value +="\n\nLast change done to the machine(by customer):\n"+document.getElementById("cxlast").value;
+              }
+             
+             if (document.getElementById("cxtrouble").value.length != 0)
+             {
+            	document.getElementById("theoutput").value +="\n\nTroubleshooting Done (along with result of each):\n"+document.getElementById("cxtrouble").value;
+             }
+             
+            if (document.getElementById("cxend").value.length != 0)
+             { 
+            	document.getElementById("theoutput").value +="\n\nEnd Resolution:\n"+document.getElementById("cxend").value;
+             }
+             
+             
+            if (document.getElementById("cxApp").value.length != 0) 
+            {
+            	document.getElementById("theoutput").value +="\n\nParts to Check: "+document.getElementById("cxApp").value;
+             }
+             
+             if (document.getElementsByName("outputtype2")[0].checked==true)
+             {
+             document.getElementById("theoutput").value += "\n\n" + document.getElementById("DEPdisc").value;
+             document.getElementById("theoutput").value +="\n\nDispatch Approver: "+document.getElementById("approverDispatch").value;
+             }
+
+             if (document.getElementsByName("outputtype2")[2].checked==true){
+             document.getElementById("theoutput").value += "\n\n" + document.getElementById("ONSdisc").value;
+             document.getElementById("theoutput").value +="\n\nDispatch Approver: "+document.getElementById("approverDispatch").value;
+             }
+            
+            if (document.getElementsByName("outputtype2")[1].checked==true){
+             document.getElementById("theoutput").value += "\n\n" + document.getElementById("CINdisc").value;
+             document.getElementById("theoutput").value +="\n\nDispatch Approver: "+document.getElementById("approverDispatch").value;
+             }
+            
+             if (document.getElementsByName("outputtype2")[3].checked==true){
+             document.getElementById("theoutput").value += "\n\n" + document.getElementById("CRUdisc").value;
+             document.getElementById("theoutput").value +="\n\nDispatch Approver: "+document.getElementById("approverDispatch").value;
+             }
+
+        /* if (document.getElementsByName("outputtype3")[0].checked==true){
+          
+          
+          
+          if (document.getElementById("approverDispatch").value.length != 0) 
+        {
+        	document.getElementById("theoutput").value +="\n\nDispatch Approver: "+document.getElementById("approverDispatch").value;
+         }  if (document.getElementById("cxOS").value.length != 1)
+          
+          
+         }*/
+         if (document.getElementsByName("outputtype3")[0].checked==true)
+             {
+                 document.getElementById("theoutput").value += "\n\nHOLD for PARTS?:"+document.getElementById("crmHoldforParts").value;
+                 document.getElementById("theoutput").value += "\n\nParts On Hold:"+document.getElementById("crmPartsonHold").value;
+                 document.getElementById("theoutput").value += "\n\nProblem Description:"+document.getElementById("cxprob").value;
+                 document.getElementById("theoutput").value += "\nWhere is the computer at the time of the call?:"+document.getElementById("crmWhereIsComp").value;
+                 document.getElementById("theoutput").value += "\n\nWith Warranty Extension?:"+document.getElementById("cmrWextension").value;
+                 document.getElementById("theoutput").value += "\nPOP Provided?:"+document.getElementById("crmPopProvided").value;
+                 document.getElementById("theoutput").value += "\nPoint of Purchase:"+document.getElementById("crmPointofPurchased").value;
+                 document.getElementById("theoutput").value += "\nWarranty Expiration::"+document.getElementById("cxdope").value;
+                 document.getElementById("theoutput").value += "\nRepair Service History:"+document.getElementById("cxsr").value; 
+                 document.getElementById("theoutput").value += "\n\nCustomer Expectation:"+document.getElementById("crmCxExpectation").value;
+                 document.getElementById("theoutput").value += "\nNumber of Systems Involved: "+document.getElementById("crmNumberSysteminvolve").value;
+                 document.getElementById("theoutput").value += "\n\Approver: "+document.getElementById("crmApprover").value; 
+             }
+} /*end function gen */
+
+</script>
+
+ 
+</form> <!-- end of the first -->
+
+
+ </br>
+<!-- <form> 
+ 
+ <tr><td BGCOLOR="#ecf8cc"><a class="y" target="_blank" href="\\mantccfnp01\Lenovo\6.0-Operations Floor">Shared Folders</a></td></tr>
+ <tr><td BGCOLOR="#ecf8cc"><a class="y" target="_blank" href="http://206.17.92.151:8080/SrvPartsLookup/partslookup.jsp?tab=1&reload=1">Lenovo Service Parts Lookup</a></td></tr>
+ <tr><td BGCOLOR="#ecf8cc"><a class="y" target="_blank" href="http://myservice.servms.com/myService/WebLogin.aspx?LoginType=SMS">My Service</a></td></tr>
+ <tr><td BGCOLOR="#ecf8cc"><a class="y" target="_blank" href="http://teamupphl/PHLENOVO/Process%20Updates/Forms/AllItems.aspx?RootFolder=%2fPHLENOVO%2fProcess%20Updates%2fNA%20and%20ANZ%20Forms&FolderCTID=&View=%7b2BD5F9EE%2d9471%2d47CE%2d91F0%2d28ECE5F3CEB9%7d">Forms</a></td></tr>
+ <tr><td BGCOLOR="#ecf8cc"><a class="y" target="_blank" href="https://ebc.cybersource.com/ebc/login/Login.do">CyberSource</a></td></tr>
+ <tr><td BGCOLOR="#ecf8cc"><a class="y" target="_blank" href="http://webfence.kewill.net/csr/">FedEx</a></td></tr>
+ <tr><td BGCOLOR="#ecf8cc"><a class="y" target="_blank" href="https://secure.logmeinrescue.com/">LogMeIn</a></td></tr>
+ <tr><td BGCOLOR="#ecf8cc"><a class="y" target="_blank" href="http://teamupphl/PHLENOVO/default.aspx">TeamUp</a></td></tr>
+ <tr><td BGCOLOR="#ecf8cc"><a class="y" target="_blank" href="https://manclkmsg10/owa/">MS Outlook Webmail Link 1</a></td></tr>
+ <tr><td BGCOLOR="#ecf8cc"><a class="y" target="_blank" href="https://mantccmsg10/owa/">MS Outlook Webmail Link 2</a></td></tr>
+ <tr><td BGCOLOR="#ecf8cc"><a class="y" target="_blank" href="http://teamupphl/PHLENOVO/Lists/Quality%20Advisory/AllItems.aspx">Quality Advisories</a></td></tr>
+ <tr><td BGCOLOR="#ecf8cc"><a class="y" target="_blank" href="http://teamupphl/PHLENOVO/Lists/Announcements/AllItems.aspx">Announcements</a></td></tr>
+ <tr><td BGCOLOR="#ecf8cc"><a class="y" href="http://lenovocrm.suth.com/ezcrmmain.asp" target="_blank">EzCRM (North America Call Documenting Tool)</a></td></tr>
+
+ </form> -->
+  
+ </br>
+
+ <div>
+ 
+	
+ 
+ </div>
+
+<script type="text/javascript" language="javascript">
+
+function ClearForm(){
+    document.MyForm.reset();
+    
+}
+
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</body>
+<div id="copyright">©Lenovo 
+
+| 12/13/2015 |      IMPROVED    |9/30/2017|<b>
+</b><br>Created By: Alvin Villafuerte Updated By: Efraim Basilio
+</br> 
+<marquee behavior="alternate"> <b>TARLAC - LENOVIANS</b></marquee>  
+</div>
+
+</html>
